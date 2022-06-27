@@ -6,3 +6,4 @@ test webhook
 webhook jenkins
 
 webhook testing based on polling
+testing jenkins results
