@@ -71,8 +71,8 @@ pipeline {
 	 	}
         
 	  }
-       stage ("Build DPDK code") {
 
+       stage ("Build DPDK code") { 
           steps {
 		  withCredentials([usernamePassword(credentialsId: 'ipdksw_github_token', passwordVariable: 'github-pass', usernameVariable: 'github_user')]) {
               		sh '''
@@ -82,8 +82,9 @@ pipeline {
   -X POST \
   -d "{\"state\": \"success\",\"context\": \"continuous-integration/jenkins\", \"description\": \"Jenkins\", \"target_url\": \"https://s3.gerritipdk.com/$JOB_NAME-$BUILD_NUMBER/index.html\"}"
 			'''
-		  }	  
-          }
+		 }		  
+            }
+
        }
     }
 }   
