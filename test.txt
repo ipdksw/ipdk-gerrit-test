@@ -4,3 +4,6 @@ Test file to test replication
 Test replication with gerrit v3.5.0.1
 test webhook
 webhook jenkins
+
+webhook testing based on polling
+testing jenkins results
